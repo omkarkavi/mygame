@@ -34,6 +34,32 @@ if __name__ == '__main__':
                 running = False
                 pygame.quit()
 
+            # if event.type == pygame.KEYDOWN:
+            #     if event.key == pygame.K_UP:
+            #         player.y = max(player.y - 5,0)
+            #
+            #     if event.key == pygame.K_DOWN:
+            #         player.y = min(player.y + 5,height)
+            #     if event.key == pygame.K_RIGHT:
+            #         player.x = min(player.x + 5,height)
+            #
+            #     if event.key == pygame.K_LEFT:
+            #         player.x = max(player.x - 5,0)
+
+        key = pygame.key.get_pressed()
+        if key[pygame.K_UP]:
+            player.y = max(player.y - 1, 0)
+        if key[pygame.K_DOWN]:
+            player.y = min(player.y + 1,height)
+        if key[pygame.K_RIGHT]:
+            player.x = min(player.x + 1,height)
+        if key[pygame.K_LEFT]:
+            player.x = max(player.x - 1,0)
+
+
+
+
+
         draw()
         pygame.display.update()
         pygame.display.flip()
