@@ -12,14 +12,16 @@ def print_hi(name):
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     print_hi('Omkar')
-    pygame.init()s
+    pygame.init()
 
     width = 800
     height = 600
 
     screen = pygame.display.set_mode((width, height))
     pygame.display.set_caption('Omkars game')
-    player=pygame.draw.circle(screen,'')
+    #player=pygame.draw.circle(screen,'blue')
+    player= pygame.Rect(10,10,50,50)
+
     def draw():
         screen.fill('cyan')
         pygame.draw.rect(screen,'black',player)
